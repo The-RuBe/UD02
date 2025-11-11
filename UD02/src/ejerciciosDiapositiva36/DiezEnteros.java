@@ -8,24 +8,26 @@ public class DiezEnteros {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int i=0;
+		int cont=0;
 		
 		int suma=0;
 		
-		while(i<10) {
+		while(cont<10) {
 			
 			System.out.println("Introduzca un número: ");
 			int numero=sc.nextInt();
 			
-			suma = suma + numero;
+			suma += numero;
 			
-			++i;
+			++cont;
 			
 		}
 		
-		double promedio= suma/i;
+		double promedio= suma/(cont*1.0);
 		
-		System.out.printf("La suma de los números es %.2f y el promedio es %.2f)", suma, promedio);
+		System.out.printf("La suma de los números es %d y el promedio es %.2f \n", suma, promedio);
+		
+		sc.close();
 		
 	}
 
