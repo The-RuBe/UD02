@@ -90,27 +90,53 @@ public class Complejidad {
 			System.out.println("El número es desafortunado.");
 
 		}
-		
+
 		sc2.close();
-		
+
 	}
-	
-	public static void validaPassword() {
-		
-		Scanner sc3 = new Scanner (System.in);
-		int mayus=0;
-		int minus=0;
-		int numeros=0;
-		int especiales=0;
-		
-		System.out.println("Ingrese una contraseña: ");
-		String password = sc3.next();
-		
-		for(int i=0; i < password.length(); i++) {
+
+	public static void validaPassword() {		
+		Scanner sc = new Scanner(System.in);
+		int mayus;
+		int minus;
+		int numeros;
+		int especiales;
+		String password;
+		do {
+			mayus = 0;
+			minus = 0;
+			numeros = 0;
+			especiales = 0;
 			
-			String caracter = password.substring(i, i+1);
+			System.out.println("Ingrese una contraseña: ");
+			password = sc.next();
 			
+			for(int i=0; i < password.length(); i++) {
+				String caracter = password.substring(i, i+1); 
+				
+				if(caracter.matches("[a-z]")) {
+					minus++;
+				}
+				else if(caracter.matches("[A-Z]")) {
+					mayus++;				
+				}
+				else if(caracter.matches("[0-9]")) {
+					numeros++;
+				}
+				else if(caracter.matches("[@#*%&/]")){
+					especiales++;
+				}
+			}
 			
-		}
+			if(minus >= 2 && mayus >= 2 && numeros >= 2 && especiales >= 2 && password.length() >= 10) {
+				System.out.println("Contraseña válida");
+			}
+			else {
+				System.out.println("Vuelve a introducir una contraseña");
+			}
+		}while(minus < 2 || mayus < 2|| numeros < 2 || especiales < 2 || password.length() < 10);
+		
+		sc.close();
+		
 	}
 }
