@@ -54,7 +54,7 @@ public class Boletin2 {
 		}
 
 		System.out.printf("TORRENT %d - %d BETIS \n", torrent, realBetis);
-		System.out.printf("Goles de Isco: %d", golesIsco);
+		System.out.printf("Goles de Isco: %d \n", golesIsco);
 
 		;
 	}
@@ -78,6 +78,6 @@ public class Boletin2 {
 			numero = numero / 10;
 		}
 		System.out.printf("El número tiene %d números pares y su suma es: %d", contPares, suma);
+		sc2.close();
 	}
-
 }
