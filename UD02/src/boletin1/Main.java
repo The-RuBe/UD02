@@ -2,7 +2,7 @@ package boletin1;
 
 public class Main {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 	
 	Complejidad.validaPassword();
 	
