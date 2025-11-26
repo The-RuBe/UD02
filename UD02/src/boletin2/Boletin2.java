@@ -77,7 +77,7 @@ public class Boletin2 {
 			}
 			numero = numero / 10;
 		}
-		System.out.printf("El número tiene %d números pares y su suma es: %d", contPares, suma);
+		System.out.printf("El número tiene %d números pares y su suma es: %d \n", contPares, suma);
 		sc2.close();
 	}
 }
