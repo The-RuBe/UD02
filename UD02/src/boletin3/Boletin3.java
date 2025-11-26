@@ -45,6 +45,37 @@ public class Boletin3 {
 
 	public static void Ejercicio2() {
 
+		Scanner sc2 = new Scanner(System.in);
+
+		int altura;
+
+		do {
+			System.out.println("Introduce la altura de la U: ");
+			altura = sc2.nextInt();
+		} while (altura < 3);
+
+		for (int i = altura; i > 1; i--) {
+			System.out.printf("*");
+			for (int j = altura - 2; j > 0; j--) {
+				System.out.printf(" ");
+			}
+			System.out.printf("*\n");
+		}
+		System.out.printf(" ");
+		for (int h = altura - 2; h > 0; h--) {
+			System.out.printf("*");
+		}
+
+		sc2.close();
+
+	}
+
+	public static void Ejercicio3() {
+
+		Scanner sc3 = new Scanner(System.in);
+
+		int dígito;
+
 	}
 
 }
