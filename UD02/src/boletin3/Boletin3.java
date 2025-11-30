@@ -76,19 +76,49 @@ public class Boletin3 {
 		for (int h = altura - 2; h > 0; h--) {
 			System.out.printf("*");
 		}
-		
+
 		sc2.close(); // Se cierra el Scanner
 
 	}
-	
+
 	// Se crea el método estático del ejercicio 3
 	public static void Ejercicio3() {
 		// Se crea el Scanner
 		Scanner sc3 = new Scanner(System.in);
-		
-		// Se integra la variable
-		int dígito;
 
+		// Se integran las variables
+		int numero;
+		int posicion;
+		int digito;
+
+		System.out.print("Introduzca un número entero positivo: ");
+		numero = sc3.nextInt();
+
+		System.out.print("Introduzca la posición donde quieres insertarlo: ");
+		posicion = sc3.nextInt();
+
+		System.out.print("Introduzca el dígito que quieres insertar: ");
+		digito = sc3.nextInt();
+
+		int aux = numero;
+		int contador = 0;
+
+		// Cuenta cuántos dígitos tiene el número
+		while (aux > 0) {
+			aux = aux / 10;
+			contador++;
+		}
+
+		// Se hace el nuevo número
+		int izquierda = numero / (int) Math.pow(10, contador - posicion + 1);
+		int derecha = numero % (int) Math.pow(10, contador - posicion + 1);
+
+		// Se inserta el dígito
+		int resultado = izquierda * (int) Math.pow(10, contador - posicion + 2)
+				+ digito * (int) Math.pow(10, contador - posicion + 1) + derecha;
+
+		System.out.printf("El resultado es: %d", resultado);
+
+		sc3.close(); // Se cierra el Scanner
 	}
-
 }
