@@ -80,4 +80,40 @@ public class Boletin2 {
 		System.out.printf("El número tiene %d números pares y su suma es: %d \n", contPares, suma);
 		sc2.close();
 	}
+
+	public static void Actividad4() {
+
+		Scanner sc3 = new Scanner(System.in);
+
+		System.out.println("Dime una palabra o frase: ");
+		String cadena = sc3.next();
+
+		String caracter1;
+
+		do {
+			System.out.println("Dime el carácter 1: ");
+			caracter1 = sc3.next();
+		} while (caracter1.length() != 1);
+
+		String caracter2;
+
+		do {
+			System.out.println("Dime el carácter 2: ");
+			caracter2 = sc3.next();
+		} while (caracter2.length() != 1);
+
+		for (int i = 0; i < cadena.length(); i++) {
+			String caracter = cadena.substring(i, i + 1);
+
+			if (caracter.equalsIgnoreCase(caracter1)) {
+				System.out.print(caracter2);
+			} else {
+				System.out.print(caracter);
+
+			}
+			sc3.close();
+		}
+
+	}
+
 }
