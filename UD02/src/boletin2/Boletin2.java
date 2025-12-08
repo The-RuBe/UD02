@@ -80,4 +80,62 @@ public class Boletin2 {
 		System.out.printf("El número tiene %d números pares y su suma es: %d \n", contPares, suma);
 		sc2.close();
 	}
+
+	public static void vocales() {
+		Scanner sc4 = new Scanner(System.in);
+
+		String vocal;
+
+		do {
+			System.out.println(
+					"Introduce un carácter para indicar si es vocal o no, introduce un punto para terminar el programa: ");
+			vocal = sc4.next();
+
+			if (vocal.equals(".")) {
+				System.out.println("Fin del programa.");
+			} else {
+				if (vocal.equalsIgnoreCase("a") || vocal.equalsIgnoreCase("e") || vocal.equalsIgnoreCase("i")
+						|| vocal.equalsIgnoreCase("o") || vocal.equalsIgnoreCase("u")) {
+
+					System.out.println("VOCAL");
+				} else {
+					System.out.println("NO VOCAL");
+				}
+			}
+
+		} while (!vocal.equals("."));
+
+		sc4.close();
+	}
+
+	public static void vecesCaracteresCadena() {
+		Scanner sc5 = new Scanner(System.in);
+		
+		int cont=0;
+		
+		System.out.println("Introduce una frase: ");
+		String cadena = sc5.nextLine();
+
+		String caracter;
+		do {
+			System.out.println("Introduce un caracter: ");
+			caracter = sc5.nextLine();
+
+			if (caracter.length() != 1) {
+				System.out.println("Debes introducir un solo caracter.");
+			}
+
+		} while (caracter.length() != 1);
+
+		int contador = 0;
+		for (int i = 0; i < cadena.length(); i++) {
+			if (cadena.substring(i, i + 1).equals(caracter)) {
+				cont++;
+			}
+		}
+
+		System.out.println("El caracter " + caracter + " aparece " + cont + " veces en la cadena.");
+
+		sc5.close();
+	}
 }
