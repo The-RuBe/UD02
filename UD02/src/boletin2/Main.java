@@ -6,7 +6,7 @@ public class Main {
 //		Boletin2.palabraPalindroma();
 //		Boletin2.copaDelRey();
 //		Boletin2.numeroEnteroPositivo();
-		Boletin2.Actividad4();
+//		Boletin2.Actividad4();
 	}
 
 }
